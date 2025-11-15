@@ -1,3 +1,4 @@
+/*ハンバーガーメニュー*/
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("hamburger-menu");
 
@@ -12,3 +13,21 @@ links.forEach(link => {
         menu.classList.remove("active");
     });
 });
+
+/*見出し文字色*/
+document.addEventListener("DOMContentLoaded", () => {
+    const headings = document.querySelectorAll('.fade-index');
+
+    window.addEventListener('scroll', () => {
+        headings.forEach(heading => {
+            const rect = heading.getBoundingClientRect();
+            if(rect.top < window.innerHeight && rect.bottom > 0){
+                heading.classList.add('active');
+            } else {
+                heading.classList.remove('active');
+            }
+        });
+    });
+});
+
+

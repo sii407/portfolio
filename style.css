@@ -147,3 +147,30 @@ footer {
     /*margin: 0 auto;        中央寄せ */
     padding: 0px 20px;        /* 上下左右の余白 */
 }
+
+/*見出し色変化*/
+.fade-index {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    color: black; /* 文字色はそのまま */
+}
+
+/* 文字下の小さいバーだけでアニメーション */
+.fade-index::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;               /* 初期は0% */
+    height: 15px;             /* 背景の高さ */
+    background-color: rgb(238, 238, 206);
+    z-index: -1;
+    transition: width 0.8s ease;
+}
+
+/* スクロールなどでアクティブになったらバーを横いっぱいに */
+.fade-index.active::before {
+    width: 100%;
+}
+
