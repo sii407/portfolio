@@ -20,10 +20,17 @@ header{
     padding: 10px 20px;        /* 内側余白も追加 */
     z-index: 1000;
 }
-
-header h1{
-    font-size: 40px;
+.title {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.05;
 }
+.title h1 {
+    font-size: 30px;
+}
+.title h2{
+    font-size: 20px;
+} 
 
 nav ul{
     display: flex;
