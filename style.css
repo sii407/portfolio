@@ -3,4 +3,32 @@ body{
     /*font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;*/
+    /*ヘッダーの高さ分の空白*/
+    padding-top: 60px;
+}
+
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f3e4; 
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-around; /* 左右に広げる */
+    padding: 10px 20px;        /* 内側余白も追加 */
+    z-index: 1000;
+}
+
+header h1{
+    /*font-size: 30px;*/
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none; /*丸を消す*/
+    justify-content: flex-end;
+    align-items: center; 
+    gap: 15px;
 }
