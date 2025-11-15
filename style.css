@@ -25,7 +25,7 @@ header{
     align-items: center;
     justify-content: space-around; /* 左右に広げる */
     padding: 10px 20px;        /* 内側余白も追加 */
-    z-index: 1000;
+    z-index: 998;
 }
 .title h1, .title h2 {
     display: flex;
@@ -46,39 +46,48 @@ header{
     align-items: center; 
     gap: 15px;
 }
+
 /*画面サイズでのヘッダー切り替え*/
 .nav-pc {
   display: block; /* PCは通常表示 */
 }
-.nav-hamburger {
+.hamburger {
     font-size: 30px;
     cursor: pointer;
     display: none;
 }
 .hamburger-menu {
     display: none;
-    }
+}
     
 @media (max-width: 600px) {
-    .nav-pc {
-    display: none; /* スマホでは PC版メニューを隠す */
+    .nav-pc { display: none; }
+    .hamburger {
+        display: block;
+        z-index: 1000;
     }
-
-    .nav-hamburger {
-    display: block; /* スマホでハンバーガーを表示 */
+    .hamburger-menu {
+    display: block;
     }
     
     #hamburger-menu {
-        display: none;
+        position: fixed;       /* 画面に固定 */
+        top: 0;                /* ヘッダーに合わせる */
+        right: -250px;         /* 画面外に隠す */
+        width: 250px;          /* メニュー幅 */
+        height: 50%;          /* 画面全体の高さ */
+        background-color: #f8ee5c;
+        transition: right 0.3s ease; /* スライドアニメーション */
+        z-index: 999;
     }
     #hamburger-menu.active {
-        display: block;
+        right: 0;
     }
 }
 
 .hamburger-menu ul {
     list-style-type: none;
-    }
+}
 
 
 
