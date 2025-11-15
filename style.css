@@ -8,8 +8,9 @@ body{
     /*font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;*/
-    /*ヘッダーの高さ分の空白*/
-    padding-top: 80px;
+    /*ヘッダーの高さ分の空白:80px*/
+    margin: 0;
+    padding: 80px 0 0;    
 }
 
 /*ヘッダー設定*/
@@ -44,4 +45,24 @@ nav ul{
     justify-content: flex-end;
     align-items: center; 
     gap: 15px;
+}
+
+
+/*フッター設定*/
+footer {
+    background-color: #f4f3e4;  /* 背景色 */
+    color: rgb(0, 0, 0);            /* 文字色 */
+    text-align: center;      /* 中央寄せ */
+    padding: 20px 0;         /* 上下の余白 */
+           /* 上の余白（本文との間） */
+    margin: 40px 0px 0px; 
+    width: 100%;
+}
+
+
+/*本文設定*/
+.main-content {
+    /*max-width: 800px;      本文の最大幅 */
+    /*margin: 0 auto;        中央寄せ */
+    padding: 0px 20px;        /* 上下左右の余白 */
 }
