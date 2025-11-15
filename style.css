@@ -39,13 +39,47 @@ header{
 .title h2{
     font-size: 20px;
 } 
-nav ul{
+.nav-pc ul{
     display: flex;
     list-style-type: none; /*丸を消す*/
     justify-content: flex-end;
     align-items: center; 
     gap: 15px;
 }
+/*画面サイズでのヘッダー切り替え*/
+.nav-pc {
+  display: block; /* PCは通常表示 */
+}
+.nav-hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.hamburger-menu {
+    display: none;
+    }
+    
+@media (max-width: 600px) {
+    .nav-pc {
+    display: none; /* スマホでは PC版メニューを隠す */
+    }
+
+    .nav-hamburger {
+    display: block; /* スマホでハンバーガーを表示 */
+    }
+    
+    #hamburger-menu {
+        display: none;
+    }
+    #hamburger-menu.active {
+        display: block;
+    }
+}
+
+.hamburger-menu ul {
+    list-style-type: none;
+    }
+
 
 
 /*フッター設定*/
