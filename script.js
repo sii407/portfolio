@@ -15,19 +15,23 @@ links.forEach(link => {
 });
 
 /*見出し文字色*/
-document.addEventListener("DOMContentLoaded", () => {
-    const headings = document.querySelectorAll('.fade-index');
+const headings = document.querySelectorAll('.fade-index');
 
-    window.addEventListener('scroll', () => {
-        headings.forEach(heading => {
-            const rect = heading.getBoundingClientRect();
-            if(rect.top < window.innerHeight && rect.bottom > 0){
-                heading.classList.add('active');
-            } else {
-                heading.classList.remove('active');
-            }
-        });
+function checkHeadings() {
+    headings.forEach(heading => {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            heading.classList.add('active');
+        } else {
+            heading.classList.remove('active');
+        }
     });
-});
+}
+
+// ページ読み込み時にチェック
+window.addEventListener('load', checkHeadings);
+
+// スクロール時にチェック
+window.addEventListener('scroll', checkHeadings);
 
 
