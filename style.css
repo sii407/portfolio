@@ -46,6 +46,14 @@ header{
     align-items: center; 
     gap: 15px;
 }
+.nav-pc li a {
+    text-decoration: none;
+    color: black;
+}
+.nav-pc li a:hover {
+    text-decoration: underline;
+    color: #0000EE;
+}
 
 /*画面サイズでのヘッダー切り替え*/
 .nav-pc {
