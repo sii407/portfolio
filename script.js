@@ -3,6 +3,7 @@ const menu = document.getElementById("hamburger-menu");
 
 hamburger.addEventListener("click", () => {
     menu.classList.toggle("active");
+    hamburger.classList.toggle("active");
 });
 
 const links = menu.querySelectorAll("a");

@@ -52,14 +52,41 @@ header{
   display: block; /* PCは通常表示 */
 }
 .hamburger {
-    font-size: 30px;
+    position: absolute; 
+    right: 50px; 
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
-    display: none;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .hamburger-menu {
     display: none;
 }
-    
+
+/*ハンバーガーメニュー回転*/
+.hamburger span {
+    display: block;
+    height: 3px;              /* 線の太さ */
+    width: 100%;              /* 線の長さ */
+    background: black;        /* 線の色 */
+    margin: 5px 0;            /* 線の間隔 */
+    transition: all 0.3s;     /* アニメーション */
+}
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(0px,11px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(0px, -11px);
+}
+
 @media (max-width: 600px) {
     .nav-pc { display: none; }
     .hamburger {
@@ -71,11 +98,11 @@ header{
     }
     
     #hamburger-menu {
-        position: fixed;       /* 画面に固定 */
-        top: 0;                /* ヘッダーに合わせる */
-        right: -250px;         /* 画面外に隠す */
-        width: 250px;          /* メニュー幅 */
-        height: 50%;          /* 画面全体の高さ */
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 40%;
         background-color: #f8ee5c;
         transition: right 0.3s ease; /* スライドアニメーション */
         z-index: 999;
@@ -84,9 +111,20 @@ header{
         right: 0;
     }
 }
-
+/*ハンバーガーメニュー書式設定*/
 .hamburger-menu ul {
     list-style-type: none;
+}
+.hamburger-menu li {
+    margin-bottom: 10px; /* 行間も調整可能 */
+}
+.hamburger-menu li a {
+    text-decoration: none;
+    color: black;
+}
+.hamburger-menu li a:hover {
+    text-decoration: underline;
+    color: #0000EE;
 }
 
 
