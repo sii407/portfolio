@@ -163,22 +163,77 @@ footer {
     padding: 0;
     color: black; /* 文字色はそのまま */
 }
-
-/* 文字下の小さいバーだけでアニメーション */
 .fade-index::before {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 0%;               /* 初期は0% */
-    height: 15px;             /* 背景の高さ */
+    width: 0%;
+    height: 15px;
     background-color: rgb(238, 238, 206);
     z-index: -1;
     transition: width 0.8s ease;
 }
-
-/* スクロールなどでアクティブになったらバーを横いっぱいに */
 .fade-index.active::before {
     width: 100%;
+}
+
+/*Skill設定*/
+/*.Skills-general {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+}*/
+.Skills-general {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.Skills-detail {
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    margin-left: 70px;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #f4f6c0;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;           /* 初期状態は非表示 */
+    pointer-events: none; /* マウス操作を無効化 */
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.Skills-icon:hover + .Skills-maintopic .Skills-detail, .Skills-detail.active{
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.Skills-icon {
+    cursor: pointer;
+    font-size: 48px;
+    width: 50px;
+    text-align: center;
+}
+.Skills-maintopic {
+    font-size: 14px;
+    color: #555;
+}
+
+.Skills-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+
+/* 開いた状態 */
+.Skills.active .Skills-detail {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 8px;
 }
 

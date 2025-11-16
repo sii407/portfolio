@@ -21,7 +21,11 @@
             h2 + * {
                 margin-top: 0;
             }
+            i + p {
+                margin-top: 0;
+            }
         </style>
+        <script src="https://kit.fontawesome.com/63a420b8c2.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -68,11 +72,33 @@
                 <h2 class="fade-index">Skills</h2>
                 <br>
                 <strong>プログラミング言語</strong>
+
+                <div class="Skills-general">
+                    <i class="fa-brands fa-html5 fa-4x Skills-icon"  onclick="toggleDetail(this)"></i>
+                    <div class="Skills-maintopic">
+                        <div class="Skills-level">
+                            <span>2025年〜</span>
+                            <span>授業・独学</span>
+                        </div>
+                        <p class="Skills-name">HTML</p>
+                        <div class="Skills-detail">
+                            <p>このポートフォリオが作成できる程度</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
                 <ul>
                     <li>Scratch:2019年～,授業・独学</li>
                     <li>Python:2024年～,授業・独学</li>
                     <li>Arduino:2025年～,授業のみ</li>
-                    <li>HTML:2025年～,授業・独学</li>
+                    
+                    <i class="fa-brands fa-html5 fa-4x skill-icon"></i>
+                    2025年～,
+                    授業・独学
+                    <p>HTML</p>
                     <li>CSS:2025年～,授業・独学</li>
                     <li>JavaScript:2025年～,授業・独学</li>
                     <li>C++:2024年～,独学のみ</li>
@@ -112,7 +138,7 @@
             </section>
 
             <section id="Contact">
-            <h2>Contact</h2>
+            <h2 class="fade-index">Contact</h2>
             <p>mail:<a href="mailto:sii407.info@gmail.com">sii407.info@gmail.com</a></p>
             <p><a href="https://github.com/sii407">GitHub(プロフィール)</a>へ</p>
             <p><a href="https://github.com/sii407/portfolio">GitHub(ポートフォリオ)</a>へ</p>

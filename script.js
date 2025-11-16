@@ -16,7 +16,6 @@ links.forEach(link => {
 
 /*見出し文字色*/
 const headings = document.querySelectorAll('.fade-index');
-
 function checkHeadings() {
     headings.forEach(heading => {
         const rect = heading.getBoundingClientRect();
@@ -27,11 +26,24 @@ function checkHeadings() {
         }
     });
 }
-
-// ページ読み込み時にチェック
 window.addEventListener('load', checkHeadings);
-
-// スクロール時にチェック
 window.addEventListener('scroll', checkHeadings);
+
+/*Skills 押下表示*/
+/*function toggleDetail(el) {
+    if (!el.classList.contains("Skills-icon")) return;
+    const container = el.closest(".Skills-general");
+    const detail = container.querySelector(".Skills-detail");
+    detail.classList.toggle("active");
+}
+document.querySelectorAll(".Skills-icon").forEach(icon => {
+    icon.addEventListener("click", () => toggleDetail(icon));
+});*/
+document.querySelectorAll(".Skills-icon").forEach(icon => {
+    icon.addEventListener("click", () => {
+        const detail = icon.nextElementSibling.querySelector(".Skills-detail");
+        detail.classList.toggle("active");
+    });
+});
 
 
