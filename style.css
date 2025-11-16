@@ -199,21 +199,19 @@ footer {
 .Skills-detail {
     position: absolute;
     top: 0%;
-    left: 22%;
-    margin-left: 70px;
-    transform: translateX(-50%) translateY(10px);
+    margin-left: 180px;
+    transform: translateX(0%) translateY(10px);
     background-color: #f4f6c0;
     color: rgb(0, 0, 0);
     padding: 5px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    opacity: 0;           /* 初期状態は非表示 */
+    border-radius: 10px;
+    opacity: 0; 
     transition: opacity 0.2s, transform 0.2s;
 }
 
 .Skills-general:hover ~ .Skills-detail, .Skills-detail.active{
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(0%) translateY(0);
 }
 
 
