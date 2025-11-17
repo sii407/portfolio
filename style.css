@@ -201,10 +201,8 @@ footer {
     opacity: 0;
     transition: opacity 0.2s, transform 0.2s;
 }
-.Skills-frame:hover .Skills-detail,
+/*.Skills-frame:hover .Skills-detail,*/
 .Skills-detail.active {
     opacity: 1;
     transform: translateX(0) translateY(0);
 }
-
-
