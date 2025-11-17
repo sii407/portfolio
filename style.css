@@ -200,6 +200,7 @@ footer {
     border-radius: 10px;
     opacity: 0;
     transition: opacity 0.2s, transform 0.2s;
+    text-align: center;
 }
 /*.Skills-frame:hover .Skills-detail,*/
 .Skills-detail.active {
