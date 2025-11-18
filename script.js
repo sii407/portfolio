@@ -31,10 +31,31 @@ window.addEventListener('scroll', checkHeadings);
 
 /*Skills 押下表示*/
 function toggleDetail(icon) {
-    const frame = icon.closest(".Skills-frame");
-    const detail = frame.querySelector(".Skills-detail");
-    detail.classList.toggle("active");
+    const detail = icon.closest(".Skills-frame").querySelector(".Skills-detail");
+    const isOpen = detail.classList.contains("show");
+
+    if (isOpen) {
+        detail.classList.remove("show");
+        window.removeEventListener("scroll", detail._scrollHandler);
+        window.removeEventListener("resize", detail._resizeHandler);
+        return;
+    }
+
+    detail.classList.add("show");
+
+    function setPosition() {
+        const rect = icon.getBoundingClientRect();
+        detail.style.top  = rect.top + "px";
+        detail.style.left = (rect.right + 3) + "px";
+    }
+
+    setPosition();
+    detail._scrollHandler = setPosition;
+    detail._resizeHandler = setPosition;
+    window.addEventListener("scroll", detail._scrollHandler);
+    window.addEventListener("resize", detail._resizeHandler);
 }
+
 
 
 
