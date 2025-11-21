@@ -2,12 +2,8 @@ section {
     scroll-margin-top: 100px;
 }
 
-
 body{
     font-family: "M PLUS 1", sans-serif;
-    /*font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;*/
     /*ヘッダーの高さ分の空白:100px*/
     margin: 0;
     padding: 100px 0 0;    
@@ -23,8 +19,8 @@ header{
     background-color: #f4f3e4; 
     color: rgb(0, 0, 0);
     align-items: center;
-    justify-content: space-around; /* 左右に広げる */
-    padding: 10px 20px;        /* 内側余白も追加 */
+    justify-content: space-around;
+    /* padding: 10px 20px; */
     z-index: 998;
 }
 .title h1, .title h2 {
@@ -41,7 +37,7 @@ header{
 } 
 .nav-pc ul{
     display: flex;
-    list-style-type: none; /*丸を消す*/
+    list-style-type: none;
     justify-content: flex-end;
     align-items: center; 
     gap: 15px;
@@ -57,7 +53,7 @@ header{
 
 /*画面サイズでのヘッダー切り替え*/
 .nav-pc {
-  display: block; /* PCは通常表示 */
+    display: block;
 }
 .hamburger {
     position: absolute; 
@@ -79,11 +75,11 @@ header{
 /*ハンバーガーメニュー回転*/
 .hamburger span {
     display: block;
-    height: 3px;              /* 線の太さ */
-    width: 100%;              /* 線の長さ */
-    background: black;        /* 線の色 */
-    margin: 5px 0;            /* 線の間隔 */
-    transition: all 0.3s;     /* アニメーション */
+    height: 3px;
+    width: 100%;
+    background: black;
+    margin: 5px 0;
+    transition: all 0.3s;
 }
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(0px,11px);
@@ -102,7 +98,7 @@ header{
         z-index: 1000;
     }
     .hamburger-menu {
-    display: block;
+        display: block;
     }
     
     #hamburger-menu {
@@ -112,7 +108,7 @@ header{
         width: 200px;
         height: 40%;
         background-color: #f8ee5c;
-        transition: right 0.3s ease; /* スライドアニメーション */
+        transition: right 0.3s ease;
         z-index: 999;
     }
     #hamburger-menu.active {
@@ -124,7 +120,7 @@ header{
     list-style-type: none;
 }
 .hamburger-menu li {
-    margin-bottom: 10px; /* 行間も調整可能 */
+    margin-bottom: 10px;
 }
 .hamburger-menu li a {
     text-decoration: none;
@@ -139,11 +135,10 @@ header{
 
 /*フッター設定*/
 footer {
-    background-color: #f4f3e4;  /* 背景色 */
-    color: rgb(0, 0, 0);            /* 文字色 */
-    text-align: center;      /* 中央寄せ */
-    padding: 20px 0;         /* 上下の余白 */
-           /* 上の余白（本文との間） */
+    background-color: #f4f3e4;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
     margin: 40px 0px 0px; 
     width: 100%;
 }
@@ -151,9 +146,7 @@ footer {
 
 /*本文設定*/
 .main-content {
-    /*max-width: 800px;      本文の最大幅 */
-    /*margin: 0 auto;        中央寄せ */
-    padding: 0px 20px;        /* 上下左右の余白 */
+    padding: 0px 20px;
 }
 
 /*見出し色変化*/
@@ -161,7 +154,7 @@ footer {
     position: relative;
     display: inline-block;
     padding: 0;
-    color: black; /* 文字色はそのまま */
+    color: black;
 }
 .fade-index::before {
     content: "";
@@ -202,8 +195,6 @@ footer {
     transform: translateY(0);
     pointer-events: auto;
 }
-
-/*copyアイコンの動作*/
 
 /*吹き出し*/
 .balloon {
