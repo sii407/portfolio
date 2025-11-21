@@ -13,20 +13,25 @@
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
         <style>
             strong + * {
-                margin-top: 0px;
+                margin-top: 0;
             }
             h2{
+                margin-top: 0;
                 margin-bottom: 4px;
+            }
+            h3{
+                margin-bottom: 0;
             }
             h2 + * {
                 margin-top: 0;
             }
-            
+
             h4{
-                margin-bottom: 4px;
+                margin-bottom: 0;
+
             }
             h4 + * {
-                margin-top: 0px;
+                margin-top: 0;
             }
             i + p {
                 margin-top: 0;
@@ -78,8 +83,7 @@
 
             <section id="Skills">
                 <h2 class="fade-index">Skills</h2>
-                <br>
-                <strong>プログラミング言語</strong>
+                <h3>プログラミング言語</h3>
                 
                 <div class="Skills-frame">
                     <table border="0">
@@ -91,7 +95,7 @@
                                     </i>
                                 </div>
                             </td>
-                            <td class="Skills-level">2024年〜<br>授業・独学</td>
+                            <td class="Skills-level">2024年〜<br>独学</td>
                         </tr>
                         <tr>
                             <td class="Skills-name">C++</td>
@@ -182,6 +186,27 @@
                         <p>このポートフォリオが作成できる程度</p>
                     </div>
                 </div>
+                <div class="Skills-frame">
+                    <table border="0">
+                        <tr>
+                            <td>
+                                <div class="Skills-general">
+                                    <i class="Skills-icon" onclick="toggleDetail(this)">
+                                        <p><img src="skillstocks/Arduino.png" width="80" height="80"></p>
+                                    </i>
+                                </div>
+                            </td>
+                            <td class="Skills-level">2025年〜<br>授業のみ</td>
+                        </tr>
+                        <tr>
+                            <td class="Skills-name">Arduino</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table> 
+                    <div class="Skills-detail">
+                        <p><i class="fa-brands fa-github"></i>
+                            <a href="https://github.com/sii407/quizbutton_system">早押しボタンのシステム</a>開発ができる程度</p>                    </div>
+                </div>
                 <br>
                 <div class="Skills-frame">
                     <table border="0">
@@ -201,14 +226,11 @@
                         </tr>
                     </table> 
                     <div class="Skills-detail">
-                        <p>このポートフォリオが作成できる程度</p>
+                        <p>翻訳システム等の作成</p>
                     </div>
                 </div>
-                <ul>
-                    <li>Arduino:2025年～,授業のみ</li>
-                </ul>
-                <strong>ソフトウェア</strong>
-                <br>
+
+                <h3>ソフトウェア</h3>
                 <div class="Skills-frame">
                     <table border="0">
                         <tr>
@@ -241,7 +263,7 @@
                                     </i>
                                 </div>
                             </td>
-                            <td class="Skills-level">2025年〜<br>授業のみ</td>
+                            <td class="Skills-level">2025年〜<br>授業・独学</td>
                         </tr>
                         <tr>
                             <td class="Skills-name">VScord</td>
@@ -249,7 +271,7 @@
                         </tr>
                     </table> 
                     <div class="Skills-detail">
-                        <p></p>
+                        <p>このポートフォリオ作成、各種プログラミング言語学習等に使用</p>
                     </div>
                 </div>
                 <br>
@@ -266,12 +288,14 @@
                             <td class="Skills-level">2025年〜<br>授業のみ</td>
                         </tr>
                         <tr>
-                            <td class="Skills-name">Arduino</td>
+                            <td class="Skills-name">ArduinoIDE</td>
                             <td>&nbsp;</td>
                         </tr>
                     </table> 
                     <div class="Skills-detail">
-                        <p></p>
+                        <p><i class="fa-brands fa-github"></i>
+                            <a href="https://github.com/sii407/quizbutton_system">早押しボタンのシステム</a>開発に使用
+                        </p>
                     </div>
                 </div>
                 <br>
@@ -293,7 +317,7 @@
                         </tr>
                     </table> 
                     <div class="Skills-detail">
-                        <p></p>
+                        <p>太陽電池実験の測定データ取得に使用</p>
                     </div>
                 </div>
                 <br>
@@ -315,7 +339,7 @@
                         </tr>
                     </table> 
                     <div class="Skills-detail">
-                        <p></p>
+                        <p>ネットワーク実験でRaspberry Piのリモート操作に使用</p>
                     </div>
                 </div>
                 <br>
@@ -329,7 +353,7 @@
                                     </i>
                                 </div>
                             </td>
-                            <td class="Skills-level">2025年〜<br>授業のみ</td>
+                            <td class="Skills-level">2025年〜<br>独学</td>
                         </tr>
                         <tr>
                             <td class="Skills-name">Godot</td>
@@ -337,7 +361,7 @@
                         </tr>
                     </table> 
                     <div class="Skills-detail">
-                        <p></p>
+                        <p><a href="#Works">スナイパーゲーム</a>が作成できる程度</p>
                     </div>
                 </div>
                 <br>
@@ -351,14 +375,13 @@
 
             <section id="Works">
                 <h2 class="fade-index">Works</h2>
-                <br>
-                <strong>3択暗記システム</strong>
+                <h4>3択暗記システム</h4>
                 <p>あらかじめ登録した問題を、3択クイズとして出題・正誤判定ができるプログラムです。出題数・出題順・正答率を表示します。<br>
                     &thinsp;
                     <i class="fa-brands fa-github"></i>
                     <a href="https://github.com/sii407/Memorize_tri_choice">プログラム</a>はこちら</p>
                 
-                <strong>スナイパーゲーム</strong>
+                <h4>スナイパーゲーム</h4>
                 <p>2年生の高専祭展示として作成したゲームです。設定画面を担当しました。<br>
                     &thinsp;
                     <i class="fa-brands fa-github"></i>
@@ -367,8 +390,8 @@
 
             <section id="Career">
                 <h2 class="fade-index">Career</h2>
-                <p><h4>-2024年4月:大阪公立大学工業高等専門学校に入学</h4>
-                    総合工学システム学科に入学。</p>
+                <h4>-2024年4月:大阪公立大学工業高等専門学校に入学</h4>
+                    総合工学システム学科に入学。
                 <p><h4>-2025年4月:知能情報コースに進級</h4></p>
                 <p><h4>-2025年5月:総合課題実習1(ハッカソン)に参加</h4>
                     11月の高専祭に向けてスナイパーゲームの作成を開始。</p>
@@ -377,7 +400,8 @@
             <h2 class="fade-index">Contact</h2>
             <p><i class="fa-solid fa-envelope"></i>
                 mail:<a href="mailto:sii407.info@gmail.com">sii407.info@gmail.com</a>
-                <i class="fa-solid fa-copy"></i></p>
+                <!-- <i class="fa-solid fa-copy"></i> -->
+            </p>
             <p><i class="fa-brands fa-github"></i>
                 <a href="https://github.com/sii407">GitHub(プロフィール)</a>へ</p>
             <p><i class="fa-brands fa-github"></i>
