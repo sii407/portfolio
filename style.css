@@ -139,14 +139,14 @@ footer {
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px 0;
-    margin: 40px 0px 0px; 
+    margin: 40px 0 0; 
     width: 100%;
 }
 
 
 /*本文設定*/
 .main-content {
-    padding: 0px 20px;
+    padding: 0 20px;
 }
 
 /*見出し色変化*/
