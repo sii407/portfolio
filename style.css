@@ -8,9 +8,9 @@ body{
     /*font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;*/
-    /*ヘッダーの高さ分の空白:80px*/
+    /*ヘッダーの高さ分の空白:100px*/
     margin: 0;
-    padding: 80px 0 0;    
+    padding: 100px 0 0;    
 }
 
 /*ヘッダー設定*/
@@ -204,3 +204,31 @@ footer {
 }
 
 /*copyアイコンの動作*/
+
+/*吹き出し*/
+.balloon {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0 0 0;
+    padding: 10px 10px;
+    width: 60px;
+    color: #000000;
+    font-size: 16px;
+    background: #f4f6c0;
+}
+
+.balloon:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top: 15px solid #f4f6c0;
+}
+
+.balloon p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
