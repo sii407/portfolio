@@ -57,6 +57,28 @@ function toggleDetail(icon) {
     window.addEventListener("resize", detail._resizeHandler);
 }
 
+/*mail adress copy*/
+function copyEmail(element) {
+    const emailText = document.getElementById('email-text').innerText;
+
+    navigator.clipboard.writeText(emailText).then(() => {
+        const pTag = document.getElementById('email-text');
+        const originalText = pTag.innerText;
+        
+        pTag.innerText = 'Copied!';
+        pTag.style.color = '#28a745'; 
+        pTag.style.fontWeight = 'bold';
+
+        setTimeout(() => {
+            pTag.innerText = originalText;
+            pTag.style.color = ''; 
+            pTag.style.fontWeight = '';
+        }, 1500);
+    }).catch(err => {
+        console.error('コピーに失敗しました: ', err);
+    });
+}
+
 
 
 
